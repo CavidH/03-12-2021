@@ -17,7 +17,15 @@ arry=[4,5,6]
 
 Array.prototype.MyIndexOf=function(element){
     for(let i = 0; i<this.length;i++){
-        if(this[i]==element){
+        if(this[i]===element){
+            return i;
+        }
+    }
+    return -1;
+};
+Array.prototype.MyIndexOf=function(element,start){
+    for(let i = start; i<this.length;i++){
+        if(this[i]===element){
             return i;
         }
     }
