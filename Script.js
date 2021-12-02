@@ -1,5 +1,5 @@
 
-arry=[4,5,45,6,5,8,9,4,36,1,4,5,8,65,6,54,21,2]
+MyArr=[4,5,45,6,5,8,9,4,36,1,4,5,8,65,6,54,21,2]
 //task 1
 Array.prototype.MyIndexOf=function(element){
     for(let i = 0; i<this.length;i++){
@@ -9,9 +9,9 @@ Array.prototype.MyIndexOf=function(element){
     }
     return -1;
 };
-console.log(arry.MyIndexOf(6))
+console.log(MyArr.MyIndexOf(6))
 
-//task 1 with start element
+//task 1 with start index
 Array.prototype.MyIndexOf=function(element,start){
     for(let i = start; i<this.length;i++){
         if(this[i]===element){
@@ -21,7 +21,7 @@ Array.prototype.MyIndexOf=function(element,start){
     return -1;
 };
 
-console.log(arry.MyIndexOf(6,7))
+console.log(MyArr.MyIndexOf(6,7))
 
 //task-2
 Array.prototype.MyFilter=function(func){
@@ -33,7 +33,10 @@ Array.prototype.MyFilter=function(func){
   }
   return arr;
 };
-console.log(arry.MyFilter(x=>x%2!==0));
-console.log(arry.MyFilter(x=>x>45));
+console.log(MyArr.MyFilter(x=>x%2!==0));
+console.log(MyArr.MyFilter(x=>x%2===0));
+console.log(MyArr.MyFilter(x=>x>45));
+
+
 
 
